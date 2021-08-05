@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+    <body>
+
+        <form >
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Username">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Password">
+            <br>
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" id="male"/> Male
+            <input type="radio" name="gender" id="female"/> Female
+            <br>
+            <input type="file" name="upload" id="upload"/>
+            <br>
+            <label>Preffered Locations:</label>
+            <input type="checkbox" name="location" id="south"/>South
+            <input type="checkbox" name="location" id="east"/>East
+            <input type="checkbox" name="location" id="west"/>West
+            <input type="checkbox" name="location" id="North"/>North
+            <br>
+            <label>Preffered Activities:</label>
+            <textarea name="activities" rows="3" cols="50" placeholder="Enter activities"></textarea>
+            <br>
+            <label>Preffered Events:</label>
+            <select name="city">
+                <option value="default">Select City</option>
+                <option value="New York">New York</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Houston">Houston</option>
+                <option value="Phoenix">Phoenix</option>
+            </select>
+
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Enter email">
+            <br>
+            <label for="hiredate">Hire Date:</label>
+            <input type="datetime-local" name="hiredate" placeholder="Enter hire date">
+            <br>
+            <label for="salary">Salary:</label>
+            <input type="number" name="salary" placeholder="Enter salary" min="5000" max="50000" step="5000">
+            <br>
+            <label for="website">Website</label>
+            <input type="url" name="website" placeholder="Enter website">
+            <br>
+            <input type="reset" value="Reset">
+            <input type="submit" onclick="alert('You Clicked')" value="Login">
+        </form>
+</html>
