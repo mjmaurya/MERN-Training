@@ -1,0 +1,72 @@
+body{
+    margin: 10px auto;
+    min-width: 250px;
+    max-width: 50% ;
+}
+*{
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+ul :nth-child(odd){
+    background-color: #f2f2f2;
+}
+ul li{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 10px 12px 40px;
+    font-size: 18px;
+    transition: all .3s ease;
+}
+ul li:hover{
+    background-color: rgb(139, 86, 86);
+}
+
+ul li.checked{
+    background-color: #5cb85c;
+}
+
+.header{
+    text-align: center;
+    background-color: crimson;
+    padding: 20px;
+}
+.header input{
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    width: 70%;
+}
+.additem{
+    background-color: #5cb85c;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px ;
+
+}
+.removeall{
+    background-color: #b90e33;
+    padding: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px ;
+    margin-top: 10px;
+}
+.close{
+    float: right;
+}
+#mylist{
+    margin: 0px;
+    padding-top: 50px;
+}
+li:checked{
+    background-color: #5cb85c;
+}
