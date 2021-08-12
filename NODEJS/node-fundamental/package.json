@@ -14,7 +14,9 @@
   "author": "Manoj Kumar",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "bootstrap": "^5.1.0",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "request": "^2.88.2"
   }
 }
