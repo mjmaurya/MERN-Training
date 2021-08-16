@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Whatt is Git? - MyBlog</title>
+
+    <style>
+      p{
+        text-align: justify;
+      }
+      .user{
+        border-radius: 50%;
+      }
+      @media only screen and (min-width: 600px) {
+        #comments{
+          max-width: 100%;
+        }
+      }
+      @media only screen and (min-width: 1200px) {
+        #comments{
+          max-width: 50%;
+        }
+      }
+      .like{
+        width: fit-content;
+        border-radius: 50%;
+        padding: 15px 10px 15px 10px;
+        cursor: pointer;
+        background-color: aqua;
+      }
+      .liked{
+        width: fit-content;
+        border-radius: 50%;
+        padding: 15px 10px 15px 10px;
+        cursor: pointer;
+        background-color: rgb(255, 0, 212);
+      }
+      #snackbar {
+  
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  right: 10%;
+  bottom: 100px;
+  font-size: 17px;
+}
+.social-share ul{
+  list-style-type: none;
+  float: right;
+  position: relative;
+}
+.social-share ul li{
+  float: left;
+}
+.social-share ul li a{
+  text-decoration: none;
+  font-size: 25px;
+  margin: 5px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 100%;
+}
+#facebook{
+  background-color: #4267B2;
+  color: #fff;
+}
+#twitter{
+  background-color: #1DA1F2;
+  color: #fff;
+}
+#whatsapp{
+  background-color: #128C7E;
+  color: #fff;
+}
+#linkedin{
+  background-color: #0077b5 ;
+  color: #fff;
+}
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="/">MyBlog</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/blogs">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+          <h1 class="title my-5">What is Git?</h1>
+          <hr>
+          <div>
+            <i class="fa fa-user" aria-hidden="true"></i><b> Manoj Kumar</b>
+            <i class="fa fa-calendar"></i><b> 16 August 2021</b>
+            <i class="fa fa-comment"></i><i id="totalComment"></i><i> comments</i>
+          </div>
+          <hr>
+            <p>Wellcome to MyBlog in this article I will discuss about Git. So let's Start the topic</p>
+
+        <h3>What is Git?</h3>
+        <p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance.</p>
+      <h3>VERSION CONTROL SYSTEM(VCS)</h3>
+      <p>Version control systems (VCS) are a type of revision control system. A revision control system maintains a history of changes to a file or set of files.</p>
+      <p>Version control systems provide developers with the ability to track changes to files, and revert changes or "roll back" to earlier versions. Version control systems also provide the ability to revert changes to files in case of an error or a problem.</p>
+      <p>Version control systems are used in software development, especially in software engineering. Version control systems are used in many different domains, including computer science, engineering, and law. Version control systems are also used in the design and construction of software products, such as operating systems, computer software, and web sites.</p>
+
+      <h3>Following are two types of Version Control Systems.</h3>
+        <ol>
+          <li>
+            <p>Centralized Version Control System (CVS)</p>
+            <p>CVS is a distributed version control system that tracks changes to files in a central repository. CVS is often used to track changes to computer programs, but can be used for any type of project. CVS is often used as a backup system for projects that are already using version control systems.</p>
+            <img class="banner" width="100%" src="https://codescript.in/wp-content/uploads/2021/08/Centralized-Version-Control-System-Workflow-1024x452.png" alt="">
+          </li>
+          <li>
+            <p>Distributed Version Control System (DVCS)</p>
+            <p>DVCS is a distributed version control system that tracks changes to files in a distributed repository. DVCS is often used to track changes to computer programs, but can be used for any type of project. DVCS is often used as a backup system for projects that are already using version control systems.</p>
+            <img width="100%" src="https://codescript.in/wp-content/uploads/2021/08/Distributed-Version-Control-System-Workflow-1024x677.png" alt="">
+          </li>
+        </ol>
+    </div>
+    <div class="container social-share" style="display: block; text-align: right;">
+      <h5>PLEASE SHARE THIS</h5>
+          <ul>
+              <li>
+                <a id="facebook">
+                <i class="fa fa-facebook"></i>
+              </a>
+              </li>
+              <li>
+                <a id="twitter">
+                <i class="fa fa-twitter"></i>
+              </a>
+              </li>
+              <li>
+                <a id="whatsapp">
+                <i class="fa fa-whatsapp"></i>
+              </a>
+              </li>
+              <li>
+                <a id="linkedin">
+                <i class="fa fa-linkedin"></i>
+              </a>
+              </li>
+            
+          </ul>
+    </div>
+
+    <div class="container my-5">
+      <div onclick="changeLike()" id="likes" class="like">
+        <img src="http://pngimg.com/uploads/like/like_PNG90.png" width="50" alt="like"><span id="totalLikes" style="color: brown; font-weight: bold;"> +5</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <h4>YOU MIGHT ALSO LIKE</h4>
+      <div class="row">
+        <div class="col-md-4 p-2">
+          <div class="card">
+            <img src="https://www.tutsmake.com/wp-content/uploads/2020/01/Essential-git-commands-every-developer-should-know.jpeg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Important Git Commands</h4>
+              <p class="card-text">Wellcome to MyBlog in this article I will discuss about all important git Command and it's uses. So let's Start the topic.</p>
+              <a href="/blogs/important-git-commands" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container my-5">
+      <h3 class="my-3">Comment:</h3>
+      <div id="comments">
+        <div class="row my-2">
+          <div class="col-3">
+            <img class="user" src="https://secure.gravatar.com/avatar/a436e0b872a103705dc262dac6561970?s=100&d=mm&r=g" width="70"  alt="">
+          </div>
+          <div class="col-9">
+            <H3>Manoj Kumar</H3>
+            <p>Best content</p>
+          </div>
+      </div>
+      <div class="row my-2">
+        <div class="col-3">
+          <img class="user" src="https://secure.gravatar.com/avatar/a436e0b872a103705dc262dac6561970?s=100&d=mm&r=g" width="70"  alt="">
+        </div>
+        <div class="col-9">
+          <H3>Manoj Kumar</H3>
+          <p>Best content</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="col-md-6 my-5 ">
+      <h3 for="comments">Write a comment:</h3>
+      <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" class="form-control" name="name" placeholder="Your Name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+      <input type="email" id="email" class="form-control" name="email" placeholder="Your Email">
+      </div>
+      <div class="form-group">
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" class="form-control" placeholder="Your Comment"></textarea>
+      </div>
+      <button type="submit" onclick="addComment()" class="btn btn-primary my-3">Submit</button>
+    </div>
+    </div>
+    <div id="snackbar">Some text some message..</div>
+
+    <footer class="footer container-fluid bg-dark p-2">
+      <div class="container">
+        <p class="text-muted">Copyright &copy; 2021 MyBlog</p>
+      </div>
+    </footer>
+
+
+    <script>
+        document.getElementById("whatsapp").href="whatsapp://send?text="+window.location.href;
+        document.getElementById("twitter").href="https://twitter.com/share?text="+window.location.href;
+        document.getElementById("facebook").href="https://www.facebook.com/sharer.php?u="+window.location.href;
+        document.getElementById("linkedin").href="https://www.linkedin.com/shareArticle?mini=true&url="+window.location.href;
+    </script>
+    <script>
+      var totalComments=2;
+      var totalLike=5;
+      document.getElementById("totalLikes").innerHTML="+"+totalLike
+      document.getElementById("totalComment").innerHTML=totalComments;
+      document.getElementById("snackbar").style.display="none"
+      function addComment() {
+        var comments = document.getElementById("comments");
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var comment = document.getElementById("comment").value;
+        name=name.trim();
+        email=email.trim();
+        comment=comment.trim();
+        console.log(`name:${name} Email: ${email} Message: ${comment}`)
+    if (name == '' || email == '' || comment == '') {
+      if (name == '') {
+        alert('Please enter your name');
+      }
+      else if (email == '') {
+        alert('Please enter your email');
+      }
+      else if (comment == '') {
+        alert('Please enter your message');
+      }
+    }
+        else{
+        var rootComment = document.createElement("div");
+        rootComment.className = "row my-2";
+        var imgDiv = document.createElement("div");
+        imgDiv.className = "col-3";
+        var img = document.createElement("img");
+        img.src = "https://secure.gravatar.com/avatar/a436e0b872a103705dc262dac6561970?s=100&d=mm&r=g";
+        img.className = "user";
+        img.width = "70";
+        imgDiv.appendChild(img);
+        rootComment.appendChild(imgDiv);
+        var nameDiv = document.createElement("div");
+        nameDiv.className = "col-9";
+        var nametag=document.createElement("h3");
+        var nameText = document.createTextNode(name);
+        nametag.appendChild(nameText);
+        var commentText = document.createTextNode(comment);
+        nameDiv.appendChild(nametag);
+        nameDiv.appendChild(commentText);
+        rootComment.appendChild(nameDiv);
+        comments.appendChild(rootComment);
+        document.getElementById("snackbar").innerHTML="Comment added";
+        document.getElementById("snackbar").style.backgroundColor="green";
+        document.getElementById("snackbar").style.color="#fff";
+        document.getElementById("snackbar").style.display="block";
+        setTimeout(()=>document.getElementById("snackbar").style.display="none",3000);
+        totalComments++;
+
+      document.getElementById("totalComment").innerHTML=totalComments;
+        // alert("Comment added");
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("comment").value = "";
+        }
+      
+      }
+      var liked=false;
+      function changeLike() {
+        var likes = document.getElementById("likes");
+        if(liked==true){
+          liked=false;
+        }
+        else{
+          liked=true;
+        }
+        if (liked) {
+          likes.classList.add("liked");
+          likes.classList.remove("like");
+          document.getElementById("snackbar").innerHTML="You liked this post";
+          document.getElementById("snackbar").style.backgroundColor="green";
+          document.getElementById("snackbar").style.display="block"
+          setTimeout(()=>document.getElementById("snackbar").style.display="none",3000);
+          totalLike++
+          document.getElementById("totalLikes").innerHTML="+"+totalLike
+          // alert("You liked this post");
+        } 
+        else {
+          likes.classList.remove("liked");
+          likes.classList.add("like");
+          document.getElementById("snackbar").innerHTML="You unliked this post";
+          document.getElementById("snackbar").style.backgroundColor="red";
+          document.getElementById("snackbar").style.display="block"
+          setTimeout(()=>document.getElementById("snackbar").style.display="none",3000);
+          totalLike--;
+          document.getElementById("totalLikes").innerHTML="+"+totalLike
+          // alert("You unliked this post");
+        }
+      }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
