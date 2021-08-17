@@ -1,6 +1,25 @@
 import React,{Component} from 'react';
 
 class Users extends Component {
+  state={
+    name:"Manoj"
+  }
+
+  changeNameOne=()=>{
+    this.setState({
+      name:"Manoj Kumar"
+    })
+  }
+  changeNameTwo=(name)=>{
+    this.setState({
+      name:name
+    })
+  }
+  changeNameFromInput=(e)=>{
+    this.setState({
+      name:e.target.value
+    })
+  }
   render() {
     // var checked=this.props.age?this.props.age:"Invalid Age"
     // return (
@@ -8,28 +27,21 @@ class Users extends Component {
     //     <h3>User Name: {this.props.name} | Age: {checked}</h3>
     //   </div>
     // );
-
-
-    if (this.props.age) {
+   
+    
         return (
       <div>
-          <div>{this.props.header}</div>
-        <h3>User Name: {this.props.name} | Age: {this.props.age}</h3>
-        <div>{this.props.footer}</div>
+          <h1>User Name: {this.state.name}</h1>
+          <input type="text" value={this.state.name} onChange={this.changeNameFromInput}/>
       </div>
-        );
-        
-    }
-    else{
-        return (
-      <div>
-          <div>{this.props.header}</div>
-        <h3>User Name: {this.props.name} </h3>
-        <div>{this.props.footer}</div>
-      </div>
-        );
-    }
+    );
   }
+  //         {/* <input type="button" onClick={this.changeNameOne} value="Click Me"/>
+  //         <input type="button" onClick={()=>this.changeNameTwo("Er. Manoj Kumar")} value="I am Engins"/>
+  //         <input type="button" onClick={this.changeNameTwo.bind(this,"Dr. Manoj Kumar")} value="I am Doctor"/> */}
+  //       </div>
+  //   );
+  // }
 
  
 }

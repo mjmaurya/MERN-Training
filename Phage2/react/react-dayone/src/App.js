@@ -14,7 +14,7 @@ class App extends Component {
         <User name="Manoj Kumar" city="Patna" />
         <User name="Manish Kumar" city="Patna" ><div><h1>Manoj</h1></div></User>
          */}
-         <Employees/>
+         <Users/>
       </div>
     );
   }
