@@ -24,6 +24,14 @@ http.createServer((req, res) => {
         res.writeHead(200, {'Content-Type': 'text/html'});
         fs.createReadStream('.'+req.url+'.html').pipe(res);
     }
+    else if (req.url === '/newblog') {
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        fs.createReadStream('./newBlog.html').pipe(res);
+    }
+    else if (req.url === '/login') {
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        fs.createReadStream('./login.html').pipe(res);
+    }
     else{
         res.writeHead(404, {'Content-Type': 'text/html'});
         fs.createReadStream('./404.html').pipe(res);

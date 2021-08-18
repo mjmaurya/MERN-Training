@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>MyBlog: Contact</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="/">MyBlog</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/blogs">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main style="min-height: 100vh;">
+        <div class="container-fluid">
+          <img src="http://dosaraf.com/wp-content/uploads/2016/07/contactUs.png" height="200" width="100%" alt="">
+        </div>
+        <div class="container-fluid">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <h2>Log In</h2>
+                
+                  <div class="form-group">
+                    <label for="username">UserName</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="UserName">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                  </div>
+
+                  <button id="submit" onclick="submit()" class="btn btn-primary mt-5 mb-5">Submit</button>
+              </div>
+            </div>
+          </div>
+      </div>
+        </main>
+      <footer class="footer container-fluid bg-dark p-2">
+        <div class="container">
+          <p class="text-muted">Copyright &copy; 2021 MyBlog</p>
+        </div>
+      </footer>
+<script>
+  if(localStorage.getItem('login')) {
+      window.location.href="/newblog"
+  }
+   function submit() {
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  username=username.trim();
+  password=password.trim();
+    if (username == '' || password == '') {
+      if (username == '') {
+        alert('Please enter your name');
+      }
+      else if (password == '') {
+        alert('Please enter your email');
+      }
+    }
+    else {
+
+    if (localStorage.getItem('username') == username && localStorage.getItem('password') == password) {
+      localStorage.setItem('login',true );
+      window.location.href="/newblog"
+        }
+        else {
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            alert('Please enter correct details');
+        }
+    }
+
+  }
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
