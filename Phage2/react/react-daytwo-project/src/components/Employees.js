@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 
 export class Employees extends Component {
@@ -11,8 +12,8 @@ export class Employees extends Component {
             }
         }
         componentDidMount() {
-                axios.get('http://localhost:5001/employee').
-                then(responce=>{
+                axios.get('http://localhost:5001/employee')
+                .then(responce=>{
                     this.setState({employees: responce.data})
                     console.log(this.state.employees)
                 }).catch(error=>{
@@ -31,6 +32,7 @@ export class Employees extends Component {
                             <th>Name</th>
                             <th>Designation</th>
                             <th>Salary</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,8 +40,11 @@ export class Employees extends Component {
                             return <tr key={employee.id}>
                                 <td>{employee.id}</td>
                                 <td>{employee.name}</td>
-                                <td>{employee.role}</td>
+                                <td>{employee.designation}</td>
                                 <td>{employee.salary}</td>
+                                <td>
+                                    <Link to={`/employee-detail/${employee.id}`}>View</Link>
+                                </td>
                             </tr>
                         }
                         )}

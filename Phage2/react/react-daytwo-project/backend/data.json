@@ -1,28 +1,34 @@
 {
-    "employee" : [
-            {
-                "id" : 1,
-                "name" : "John Doe",
-                "role" : "Developer",
-                "salary" : 100000
-            },
-            {
-                "id" : 2,
-                "name" : "Jane Doe",
-                "role" : "Developer",
-                "salary" : 100000
-            },
-            {
-                "id" : 3,
-                "name" : "John Smith",
-                "role" : "Manager",
-                "salary" : 200000
-            },
-            {
-                "id" : 4,
-                "name" : "Jane Smith",
-                "role" : "Manager",
-                "salary" : 200000
-            }
-        ]
+  "employee": [
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "designation": "Developer",
+      "salary": 100000
+    },
+    {
+      "id": 4,
+      "name": "Jane Smith",
+      "designation": "Manager",
+      "salary": 200000
+    },
+    {
+      "name": "Manoj Kumar",
+      "salary": "36000",
+      "designation": "Software Developer",
+      "id": 5
+    },
+    {
+      "name": "Carlee Motti",
+      "salary": "45000",
+      "designation": "Software Developer II",
+      "id": 6
+    },
+    {
+      "name": "Manoj Kumar Maurya",
+      "salary": "75000",
+      "designation": "Automation",
+      "id": 7
+    }
+  ]
 }
