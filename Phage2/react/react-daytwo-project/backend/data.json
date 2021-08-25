@@ -30,5 +30,35 @@
       "designation": "Automation",
       "id": 7
     }
+  ],
+  "users": [
+    {
+      "id": 1001,
+      "username": "mjmaurya",
+      "password": "mjmaurya",
+      "email": "mjmaurya@gmail.com",
+      "usertype": "admin"
+    },
+    {
+      "id": 1002,
+      "username": "king",
+      "password": "12345",
+      "email": "king@gmail.com",
+      "user_type": "user"
+    },
+    {
+      "id": 1003,
+      "username": "jane",
+      "password": "jane",
+      "email": "jane@gmail.com",
+      "user_type": "user"
+    },
+    {
+      "username": "admin",
+      "password": "admin",
+      "email": "admin@gmail.com",
+      "usertype": "admin",
+      "id": 1004
+    }
   ]
 }

@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
+import { isAuthenticated } from '../repository';
 
 
 export class Employees extends Component {
@@ -22,9 +23,13 @@ export class Employees extends Component {
         }
 
     render() {
+        const xyz=isAuthenticated();
+        console.log(xyz);
         return (
+            xyz?
             <div>
                 <h1>Employees Data</h1>
+                <Link to={'/employee-add'} className="nav-link btn btn-warning"> Add Employee</Link>
                 <table className="table table-striped">
                     <thead>
                         <tr>
@@ -51,6 +56,8 @@ export class Employees extends Component {
                     </tbody>
                 </table>
             </div>
+        :
+        <Link to={'/login'} className="nav-link btn btn-warning"> Login to Manage Employee</Link>
         )
     }
 }

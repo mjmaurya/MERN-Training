@@ -1,0 +1,49 @@
+{
+  "task": [
+    {
+      "title": "Wipro Interview",
+      "description": "Wipro Technical Inter View",
+      "dueDate": "2021-08-29",
+      "priority": "Medium",
+      "status": "Not Started",
+      "project": "",
+      "color": "#c31d97",
+      "textColor": "#0dfd15",
+      "category": "Home",
+      "id": 6
+    },
+    {
+      "title": "Wipro Interview",
+      "description": "Wipro Technical Inter View",
+      "status": "completed",
+      "priority": "High",
+      "dueDate": "2021-08-14",
+      "category": "Home",
+      "color": "#26b413",
+      "textColor": "#ff0505",
+      "id": 8
+    },
+    {
+      "title": "Wipro Interview",
+      "description": "Wipro Technical Inter View",
+      "status": "completed",
+      "priority": "High",
+      "dueDate": "2021-09-02",
+      "category": "Home",
+      "color": "#654e4e",
+      "textColor": "#ee1111",
+      "id": 9
+    },
+    {
+      "title": "Wipro Interview",
+      "description": "Wipro Technical Inter View",
+      "status": "completed",
+      "priority": "Medium",
+      "dueDate": "2021-08-01",
+      "category": "Home",
+      "color": "#edd012",
+      "textColor": "",
+      "id": 10
+    }
+  ]
+}
