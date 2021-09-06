@@ -1,0 +1,25 @@
+<h1>
+    Simplilearn Courses
+</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Instructor</th>
+        <th>Discription</th>
+        <th>Price</th>
+        <th>Duration</th>
+        <th>Action</th>
+    </tr>
+    {{#each data}}
+    <tr>
+        <td>{{this.cname}}</td>
+        <td>{{this.iname}}</td>
+        <td>{{this.cdisc}}</td>
+        <td>{{this.cprice}}</td>
+        <td>{{this.cduration}}</td>
+        <td><a href="/course/delete/{{this._id}}">delete</a></td>
+        <td><a href="/course/{{this._id}}/edit/">edit</a></td>
+    </tr>
+    {{/each}}
+</table>

@@ -1,0 +1,11 @@
+<form action="/course/{{course._id}}/update" method="POST">
+<h1>{{course.cname}}</h1>
+    <p>
+        <label>Course Name:</label><input value="{{course.cname}}" name="cname" /><br/><br/>
+        <label>Instructor Name:</label><input value="{{course.iname}}" name="iname" /><br/><br/>
+        <label>Discription:</label><input value="{{course.cdisc}}" name="cdisc" /><br/><br/>
+        <label>Duration:</label><input value="{{course.cduration}}" name="cduration" /><br/><br/>
+        <label>Fee:</label><input value="{{course.cprice}}" name="cprice" /><br/><br/>
+        <button type="submit">Update Courses</button>
+    </p>
+</form>

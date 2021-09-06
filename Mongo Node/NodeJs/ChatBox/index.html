@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Box</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <style>
+        .chat-box {
+            width: 500px;
+            height: 500px;
+            border: 1px solid #ccc;
+            overflow: auto;
+            margin: 0 auto;
+            padding: 10px;
+        }
+    
+        .chat-box-wrapper {
+            width: 500px;
+            height: 500px;
+            border: 1px solid #ccc;
+            overflow: auto;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .chat-box-wrapper::-webkit-scrollbar {
+            width: 10px;
+        }
+
+
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div id="message">
+
+        </div>
+        <br>
+        <div class="jumbotron">
+            <h1 class="display-4">Start Chatting</h1>
+            <input id="txtName" class="form-control" placeholder="UserName" type="text"/>
+            <br>
+            <textarea id="txtMessage" class="form-control" placeholder="Message"></textarea>
+            <button id="send" class="btn btn-success">Send</button>
+
+        </div>
+
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket= io();
+        $(() => {
+            $('#send').click(() => {
+                var chatMassage={
+
+                username : $('#txtName').val(),
+                chat :$('#txtMessage').val()
+                }
+                console.log(chatMassage)
+                postChat(chatMassage);
+                $('#txtMessage').val('');
+            });
+        })
+        function postChat(chatMassage){
+            $.ajax({
+                url: 'http://localhost:3020/chats',
+                type: 'POST',
+                data: JSON.stringify(chatMassage),
+                success: function(data) {
+                    console.log(data);
+                }
+                ,
+                dataType: "json",
+                contentType: "application/json"
+            });
+        }
+        function getChats(){
+            $.get("/chats",(chats)=>{
+                chats.forEach(element => {
+                    addChat(element)
+                });
+            })
+        }
+        function addChat(chatObj){
+            $("#message").append(`<h5>${chatObj.username}</h5><p>${chatObj.chat}</p>`)
+        }
+        socket.on("chat",addChat)
+    </script>
+</body>
+</html>
